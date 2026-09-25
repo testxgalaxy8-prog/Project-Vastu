@@ -7,6 +7,24 @@
   --font-body: 'Marcellus', serif;
   --font-philosopher: 'Philosopher', sans-serif;
   --font-cinzel: 'Cinzel', serif;
+
+  --color-maroon: #6B1F1F;
+  --color-maroon-dark: #4A1515;
+  --color-maroon-deep: #330D0D;
+  --color-terracotta: #B94E2C;
+  --color-terracotta-dark: #91391D;
+  --color-saffron: #E88A16;
+  --color-saffron-deep: #C76E08;
+  --color-teal: #0F5C55;
+  --color-teal-dark: #093732;
+  --color-peacock: #167A68;
+  --color-gold: #D4A72C;
+  --color-gold-light: #EAC967;
+  --color-sand: #E8D3A8;
+  --color-sand-light: #F4E8CE;
+  --color-dark: #2D1B14;
+  --color-dark-deep: #1A0F0A;
+  --color-indigo: #283B63;
 }
 
 @keyframes spin-slow {
@@ -98,12 +116,12 @@
   0%, 100% {
     opacity: 0.7;
     transform: scale(1);
-    filter: drop-shadow(0 0 25px rgba(245, 158, 11, 0.4));
+    filter: drop-shadow(0 0 25px rgba(212, 167, 44, 0.4));
   }
   50% {
     opacity: 1;
     transform: scale(1.05);
-    filter: drop-shadow(0 0 45px rgba(245, 158, 11, 0.65));
+    filter: drop-shadow(0 0 45px rgba(212, 167, 44, 0.65));
   }
 }
 
@@ -122,10 +140,10 @@
 
 @keyframes ink-glow {
   0%, 100% {
-    text-shadow: 0 0 8px rgba(217, 119, 6, 0.3);
+    text-shadow: 0 0 8px rgba(212, 167, 44, 0.3);
   }
   50% {
-    text-shadow: 0 0 18px rgba(245, 158, 11, 0.8), 0 0 30px rgba(220, 38, 38, 0.3);
+    text-shadow: 0 0 18px rgba(232, 138, 22, 0.8), 0 0 30px rgba(185, 78, 44, 0.4);
   }
 }
 
@@ -138,131 +156,179 @@
   }
 }
 
-/* Authentic Ancient Palm Leaf Manuscript (Tada-Patra) Background & Golden Aura */
-.bg-palmleaf {
-  background-color: #ede0c7;
+/* Subtle Indian Architectural & Vastu Mandala Geometry Overlays */
+.bg-mandala-pattern {
   background-image:
-    /* Ambient warm golden aura radial fields */
-    radial-gradient(circle at 50% 15%, rgba(251, 191, 36, 0.22) 0%, rgba(217, 119, 6, 0.08) 40%, transparent 70%),
-    radial-gradient(circle at 10% 85%, rgba(245, 158, 11, 0.15) 0%, transparent 55%),
-    radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.12) 0%, transparent 50%),
-    /* Horizontal natural palm leaf fibrous striations */
-    repeating-linear-gradient(
-      0deg,
-      rgba(139, 69, 19, 0.035) 0px,
-      rgba(139, 69, 19, 0.035) 1px,
-      transparent 1px,
-      transparent 5px
-    ),
-    /* Subtle organic manuscript grain */
-    radial-gradient(rgba(146, 64, 14, 0.06) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 5px, 24px 24px;
+    radial-gradient(circle at 50% 50%, rgba(212, 167, 44, 0.12) 0%, transparent 60%),
+    linear-gradient(0deg, rgba(212, 167, 44, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 167, 44, 0.06) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
 }
 
-/* Illuminated Golden Aura Container Glow */
+.bg-vastu-grid {
+  background-image:
+    linear-gradient(to right, rgba(212, 167, 44, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 167, 44, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-yantra-pattern {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(232, 138, 22, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(212, 167, 44, 0.1) 0%, transparent 40%),
+    linear-gradient(45deg, rgba(212, 167, 44, 0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(212, 167, 44, 0.04) 25%, transparent 25%);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Rich Heritage Section Backgrounds */
+.section-hero-maroon {
+  background: radial-gradient(circle at 80% 20%, rgba(232, 138, 22, 0.28) 0%, transparent 55%),
+              linear-gradient(135deg, #4A1515 0%, #6B1F1F 45%, #91391D 80%, #B94E2C 100%);
+}
+
+.section-teal-heritage {
+  background: radial-gradient(circle at 20% 80%, rgba(212, 167, 44, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 80% 10%, rgba(232, 138, 22, 0.15) 0%, transparent 45%),
+              linear-gradient(145deg, #093732 0%, #0F5C55 50%, #167A68 100%);
+}
+
+.section-terracotta-rich {
+  background: radial-gradient(circle at 75% 25%, rgba(232, 138, 22, 0.25) 0%, transparent 55%),
+              radial-gradient(circle at 15% 85%, rgba(212, 167, 44, 0.15) 0%, transparent 45%),
+              linear-gradient(135deg, #5C1919 0%, #B94E2C 55%, #91391D 100%);
+}
+
+.section-sandstone-rich {
+  background: radial-gradient(circle at 50% 10%, rgba(232, 138, 22, 0.18) 0%, transparent 60%),
+              radial-gradient(circle at 85% 85%, rgba(185, 78, 44, 0.12) 0%, transparent 50%),
+              linear-gradient(180deg, #E8D3A8 0%, #DEC494 50%, #D8BE8A 100%);
+}
+
+.section-indigo-deep {
+  background: radial-gradient(circle at 30% 30%, rgba(212, 167, 44, 0.18) 0%, transparent 55%),
+              radial-gradient(circle at 75% 85%, rgba(232, 138, 22, 0.15) 0%, transparent 50%),
+              linear-gradient(140deg, #162137 0%, #283B63 60%, #1B2945 100%);
+}
+
+.section-saffron-rich {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 167, 44, 0.25) 0%, transparent 60%),
+              linear-gradient(135deg, #E88A16 0%, #C76E08 50%, #B94E2C 100%);
+}
+
+/* Distinctive Heritage Card Panels */
+.card-sand {
+  background-color: #E8D3A8;
+  color: #2D1B14;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(45, 27, 20, 0.15);
+}
+
+.card-teal {
+  background-color: #0F5C55;
+  color: #FFF7ED;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(15, 92, 85, 0.3);
+}
+
+.card-terracotta {
+  background-color: #B94E2C;
+  color: #FFF7ED;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(185, 78, 44, 0.3);
+}
+
+.card-maroon {
+  background-color: #6B1F1F;
+  color: #FFF7ED;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(107, 31, 31, 0.35);
+}
+
+.card-indigo {
+  background-color: #283B63;
+  color: #FFF7ED;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(40, 59, 99, 0.3);
+}
+
+.card-dark {
+  background-color: #2D1B14;
+  color: #FFF7ED;
+  border: 2px solid #D4A72C;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Illuminated Antique Gold Accents */
+.border-gold-antique {
+  border-color: #D4A72C;
+}
+
 .golden-aura-glow {
   box-shadow: 
-    0 0 35px -5px rgba(245, 158, 11, 0.3),
-    0 0 15px -2px rgba(217, 119, 6, 0.2);
+    0 0 35px -5px rgba(212, 167, 44, 0.35),
+    0 0 15px -2px rgba(232, 138, 22, 0.2);
 }
 
 .golden-aura-strong {
   box-shadow: 
-    0 0 60px 10px rgba(245, 158, 11, 0.35),
-    0 0 25px 2px rgba(220, 38, 38, 0.2);
+    0 0 50px 8px rgba(212, 167, 44, 0.4),
+    0 0 25px 2px rgba(185, 78, 44, 0.25);
 }
 
-/* Ancient Palm Leaf Folio Card Styling */
-.palm-folio-card {
-  background-color: #f7eedb;
-  background-image: 
-    repeating-linear-gradient(
-      0deg,
-      rgba(180, 83, 9, 0.025) 0px,
-      rgba(180, 83, 9, 0.025) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-  border: 1px solid #d4af37;
-  box-shadow: 0 4px 20px -3px rgba(120, 53, 15, 0.12);
-}
-
-.animate-aura-pulse {
-  animation: aura-pulse 4s ease-in-out infinite;
-}
-
-.animate-ink-glow {
-  animation: ink-glow 2.5s ease-in-out infinite;
-}
-
-.animate-unroll-folio {
-  animation: unroll-folio 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-ray-rotate {
-  animation: ray-rotate 120s linear infinite;
-}
-.bg-parchment {
-  background-color: #fbf8f1;
-  background-image: 
-    radial-gradient(#d4af37 0.75px, transparent 0.75px),
-    radial-gradient(#9a3412 0.75px, #fbf8f1 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+.text-gold-antique {
+  color: #D4A72C;
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #b45309 0%, #d97706 35%, #92400e 70%, #d97706 100%);
+  background: linear-gradient(135deg, #F3E6C8 0%, #D4A72C 50%, #E88A16 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.vermilion-gradient-text {
-  background: linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #7f1d1d 100%);
+.saffron-gradient-text {
+  background: linear-gradient(135deg, #FFF7ED 0%, #E88A16 60%, #B94E2C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.sacred-border {
-  border-image: linear-gradient(to right, #b45309, #f59e0b, #b45309) 1;
 }
 
 /* User Tab Style Specs */
-/* Inactive tabs -> White background with a thin green border */
+/* Inactive tabs -> Rich Deep Teal or Maroon border */
 .tab-inactive {
-  background-color: #ffffff;
-  border: 1px solid #16a34a;
-  color: #14532d;
+  background-color: #E8D3A8;
+  border: 1.5px solid #D4A72C;
+  color: #2D1B14;
+  font-weight: 600;
   transition: all 0.25s ease;
 }
 
 .tab-inactive:hover {
-  background-color: #f0fdf4;
-  border-color: #15803d;
-  color: #052e16;
+  background-color: #F4E8CE;
+  border-color: #E88A16;
+  color: #6B1F1F;
 }
 
-/* Active tab -> Soft green fill with red border */
+/* Active tab -> Saffron fill with Deep Maroon border */
 .tab-active {
-  background-color: #ecfdf5;
-  border: 2px solid #dc2626;
-  color: #7f1d1d;
-  font-weight: 600;
-  box-shadow: 0 4px 12px -2px rgba(220, 38, 38, 0.15);
+  background-color: #E88A16;
+  border: 2px solid #6B1F1F;
+  color: #2D1B14;
+  font-weight: 700;
+  box-shadow: 0 4px 14px -2px rgba(232, 138, 22, 0.35);
 }
 
-/* Custom Scrollbar */
+/* Custom Heritage Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #f5f0e3;
+  background: #1A0F0A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4a373;
+  background: #D4A72C;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b07d4b;
+  background: #E88A16;
 }

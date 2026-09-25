@@ -15,6 +15,7 @@ import { WhatWeDoSection } from './components/WhatWeDoSection';
 import { GyanKoshSection } from './components/GyanKoshSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
+import { AdminPanel } from './components/AdminPanel';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -67,7 +68,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-palmleaf text-[#22160d] flex flex-col font-['Marcellus'] relative overflow-x-hidden selection:bg-amber-300 selection:text-amber-950">
+    <div className="min-h-screen bg-[#1A0F0A] text-[#FFF7ED] flex flex-col font-['Marcellus'] relative overflow-x-hidden selection:bg-[#E88A16] selection:text-[#2D1B14]">
       {/* Intro Animation on arrival / domain search */}
       {showIntro && (
         <IntroAnimation onComplete={handleCompleteIntro} />
@@ -106,7 +107,10 @@ export default function App() {
         )}
 
         {currentPage === 'gyan-kosh' && (
-          <GyanKoshSection initialCategory={gyanKoshSubTab} />
+          <GyanKoshSection
+            initialCategory={gyanKoshSubTab}
+            onNavigate={handleNavigate}
+          />
         )}
 
         {currentPage === 'testimonials' && (
@@ -115,6 +119,10 @@ export default function App() {
 
         {currentPage === 'contact' && (
           <ContactSection />
+        )}
+
+        {currentPage === 'admin' && (
+          <AdminPanel onNavigate={handleNavigate} />
         )}
       </main>
 

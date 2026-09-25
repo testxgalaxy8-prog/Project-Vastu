@@ -1,4 +1,24 @@
-export type PageType = 'home' | 'discover' | 'what-we-do' | 'gyan-kosh' | 'testimonials' | 'contact';
+export type PageType = 'home' | 'discover' | 'what-we-do' | 'gyan-kosh' | 'testimonials' | 'contact' | 'admin';
+
+export type AdPlacement = 'article-inline' | 'article-sidebar' | 'library-top' | 'footer-banner';
+
+export interface Advertisement {
+  id: string;
+  clientName: string;
+  title: string;
+  tagline: string;
+  description: string;
+  imageUrl: string;
+  targetUrl: string;
+  ctaText: string;
+  badge: string; // e.g. "Sponsored Partner", "Featured Artisan", "Architecture Patron"
+  placements: AdPlacement[];
+  category: string;
+  status: 'active' | 'paused';
+  viewsCount: number;
+  clicksCount: number;
+  createdAt: string;
+}
 
 export type DiscoverTab = 
   | 'meaning' 
